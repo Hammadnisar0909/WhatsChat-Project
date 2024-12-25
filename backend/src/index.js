@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import helmet from "helmet"; // For security headers
+// import helmet from "helmet"; // For security headers
 import path from "path";
 
 import { connectDB } from "./lib/db.js";
@@ -28,19 +28,19 @@ app.use(
 );
 
 // Helmet for security
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'unsafe-inline'", "blob:"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: ["'self'", "data:", "blob:"],
-        connectSrc: ["'self'", "https://your-api-domain.com"], // Update with your API domain if needed
-      },
-    },
-  })
-);
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: {
+//       directives: {
+//         defaultSrc: ["'self'"],
+//         scriptSrc: ["'self'", "'unsafe-inline'", "blob:"],
+//         styleSrc: ["'self'", "'unsafe-inline'"],
+//         imgSrc: ["'self'", "data:", "blob:"],
+//         connectSrc: ["'self'", "https://your-api-domain.com"], // Update with your API domain if needed
+//       },
+//     },
+//   })
+// );
 
 // Routes for APIs
 app.use("/api/auth", authRoutes);
