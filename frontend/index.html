@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/message-square.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' blob:https://whatschat-project-4.onrender.com/a624d0f8-7232-4a46-88ff-e6a7682e9d90;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' blob: https://whatschat-project-4.onrender.com;">
     <title>WhatsChat - Realtime Chat App</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <!-- <script nonce="r849t7"></script> -->
+    <script type="module" src="/dist/index.js"></script> <!-- Ensure correct path -->
   </body>
 </html>
