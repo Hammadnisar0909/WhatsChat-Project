@@ -56,6 +56,14 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self'; script-src 'self' blob:;"
+  );
+  next();
+});
+
 // Start the server
 server.listen(PORT, () => {
   console.log(`Server is running on PORT: ${PORT}`);
